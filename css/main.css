@@ -1,0 +1,85 @@
+*{
+
+	margin: 0 ;
+	padding: 0 ;
+}
+body {
+	background: #bbb ;
+}
+#page {
+	background: white ;
+	width: 1000px ;
+	margin: auto;
+}
+#header {
+	text-align: center; 
+}
+#header h1 {
+	padding: 30px;
+}
+#header p {
+	padding-bottom: 30px;
+}
+#header span {
+	padding: 50px ;
+	font-size: 20px;
+}
+#tabs {
+	text-align: center;
+}
+#tabs button {
+	padding: 10px 7px 10px;
+}
+.lab{
+	min-height: 400px;
+	border-bottom: 1px dashed grey;
+}
+.left-side {
+	width: 300px;
+	min-height: 400px;
+	//background: #ddd;
+	float: left;padding: 10px 10px 10px 30px;
+	line-height: 26px;
+
+}
+
+.left-side ul{
+	list-style-type: circle;
+}
+
+
+.left-side li{
+	//padding-left: 5px; 
+	text-indent: 20px;
+}
+
+.visible{
+	display: block !important;
+}
+
+.lab{
+	display: none;
+}
+
+.select{
+	background: #b7b7c0; 
+}
+
+.right-side{
+	padding: 10px 20px;
+}
+
+.right-side h3{
+	padding: 10px 0px 5px; 
+
+}
+
+.right-side p{
+	padding-bottom: 5px; 
+	line-height: 26px;
+	text-align: justify; 
+}
+
+.illustr{
+	width: 600px;
+}

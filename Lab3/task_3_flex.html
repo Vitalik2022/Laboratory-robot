@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ЛР №3_3</title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		#page{
+			padding: 60px;
+		}
+
+		#nav ul{
+			text-align: center;
+			padding: 0px 0px 30px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		#nav ul li{
+			text-align: center;
+			padding: 8px;
+			background:black;
+			color:white;
+			font-size: 20px;
+			margin: 5px;
+			list-style-type: none;
+		}
+
+		#nav select{
+			background:inherit;
+			color:inherit;
+			border:none;
+			font-size: 18px; 
+		}
+
+		ol{
+			margin: 30px;
+		}
+
+		ol li::marker {
+		  color: blue;
+		  font-size: 2em;
+		}
+
+
+		.grid{
+			padding-bottom: 20px;
+			clear: both;
+		}
+
+		.block1_1{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		.block1_1 div{
+			width: 50%;
+		}
+
+		.block1 h2,h3{
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.acenter{
+			text-align: center;		
+		}
+
+		.orange{
+			color:orange;
+		}
+
+
+		.floatL{
+			float:left;
+			margin-right: 40px;
+		}
+
+		.ul1{
+			//padding-left: 50%;
+			text-align: justify;
+		}
+
+		.ul1 li{
+			padding-bottom: 15px;
+		}
+
+		.ul1 li h4{
+			text-transform: uppercase;
+			padding-bottom: 5px;
+		}
+
+		.ul1 li p{
+			color: #808080;
+		}
+
+		.pb{
+			padding-bottom: 20px;
+		}
+
+		.block2{
+			background:#292929;
+			text-align: center;
+			padding: 15px;
+		}
+
+		.block2 h2{
+			color: white;
+			text-transform: uppercase;
+		}
+
+		.block2 h3{
+			color: #2d71ac;
+		}	
+
+		#complex{
+			padding-top: 15px;
+		}
+
+		#complex img{
+			width: 32%;
+		}
+
+		.block3{
+			padding: 30px 0px;
+		}
+
+		.block3 h2,h5{
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.block3 h5{
+			color: #3498f2;
+		}
+
+		.col{
+			width: 31%;
+			float: left;
+			padding:10px; 
+		}
+
+		.col h4{
+			color:orange;
+			text-transform: uppercase;
+			font-size: 12px;
+			padding-bottom: 5px;
+		}
+
+		.col p{
+			font-size: 12px;
+			padding-bottom: 6px;
+		}
+
+		.col img{
+			//margin: 20px;
+		}
+
+		.block4{
+			background: orange;
+			padding: 10px 30px;
+			height: 55px;
+		}
+
+		.block4 h2,h5{
+			text-transform: uppercase;
+		}
+
+		.block4 h2{
+			color: white;		
+			width: 50%;
+			float: left;
+			margin-right: 60px;
+
+		}
+
+		.block4 h5{
+			text-align: center;
+			//padding: 10px; 
+			line-height: 60px;
+		}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="nav">
+			<ul>
+				<li>Форми навчання</li>
+				<li>Заходи</li>
+				<li>Про Академію</li>
+				<li>Контакти</li>
+				<li>
+					<select>
+						<option>КИЇВ</option>
+						<option>ОДЕСА</option>
+						<option>ЛЬВІВ</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+
+		<div class="grid block1">
+			<h3 class="orange">КУРС ПРОГРАМУВАННЯ</h3>
+			<h2 class="pb">JAVA З ПРАЦЕВЛАШТУВАННЯМ:</h2>
+
+			<div class="block1_1">
+				<div class="acenter">
+					<img src="images/1.jpg">
+				</div>
+					
+				<div>
+					<ul class="ul1">
+						<li>
+							<h4>Стажування в IT-компанії</h4>
+							<p>Покажи себе на курсі і ще до закінчення навчання ми відправимо тебе на стажування в IT-компанію</p>
+						</li>
+						<li>
+							<h4>Три випускних проекти</h4>
+							<p>Наприкінці курсу ти будеш мати три проекти з якими легко працевлаштуватись</p>					
+						</li>
+						<li>
+							<h4>Інтенсивність</h4>
+							<p>На відміну від інших наші студенти вчаться 6 разів на тиждень впродовж всього терміну. Саме тому вони краще за випускників всіх інших шкіл та легко працевлаштовуються</p>
+						</li>
+					</ul>
+				</div>
+			</div>		
+		</div>
+
+		<div class="grid block2">
+			<h2>Більше 800 випускників</h2>
+			<h3>досягли успіху в IT-сфері</h3>
+
+			<div id="complex">
+				<img src="images/2_1.jpg">
+				<img src="images/2_2.jpg">
+				<img src="images/2_3.jpg">
+				<img src="images/2_4.jpg">
+				<img src="images/2_5.jpg">
+				<img src="images/2_6.jpg">
+			</div>
+		</div>
+
+		<div id="faqs" class="grid block3">
+			<h5>Чому варто нам довіряти</h5>
+			<h2 class="pb">Часті запитання:</h2>
+
+			<div class="col">
+				<p>
+					<h4><span>01</span>Гарантії працевлаштування</h4>
+					<p>Всі хто проходив наш унікальний курс з інкубатором досвіду влаштувались на роботу і ми єдині в Україні, хто мають відеовідгуки роботодавців</p>
+				</p>
+
+				<p>
+					<h4><span>02</span>Що таке "повторка"</h4>
+					<p>Це можливість пройти курс повторно у разі, якщо ви щось пропустили. Вона повністю безкоштовна та має необмежену кількість разів. Іншими словами з нами ви отримаєте знання не переплачуючи за них</p>
+				</p>
+
+				<p>
+					<h4><span>03</span>Що таке "інкубатор"</h4>
+					<p>Це можливість пройти курс повторно у разі, якщо ви щось пропустили. Вона повністю безкоштовна та має необмежену кількість разів. Іншими словами з нами ви отримаєте знання не переплачуючи за них</p>
+				</p>
+			</div>
+
+			<div class="col acenter">
+				<img src="images/3.jpg" style="width: 100%">
+			</div>
+			
+			<div class="col">
+				<p>
+					<h4><span>04</span>Рейтинг компанії</h4>
+					<p>Всі хто проходив наш унікальний курс з інкубатором досвіду влаштувались на роботу і ми єдині в Україні, хто мають відеовідгуки роботодавців</p>
+				</p>
+
+				<p>
+					<h4><span>05</span>Розтермінування</h4>
+					<p>Це можливість пройти курс повторно у разі, якщо ви щось пропустили. Вона повністю безкоштовна та має необмежену кількість разів. Іншими словами з нами ви отримаєте знання не переплачуючи за них</p>
+				</p>
+
+				<p>
+					<h4><span>06</span>Скільки триває курс</h4>
+					<p>Це можливість пройти курс повторно у разі, якщо ви щось пропустили. Вона повністю безкоштовна та має необмежену кількість разів. Іншими словами з нами ви отримаєте знання не переплачуючи за них</p>
+				</p>
+			</div>
+			<br>		
+		</div>
+
+		<div class="grid block4">
+			<h2>Навчайся зараз, сплачуй потім</h2>
+			<h5>Розтермінування на 24 місяці</h5>
+		</div>
+	</div>
+</body>
+</html>

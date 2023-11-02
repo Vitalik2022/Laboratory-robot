@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ЛР №4</title>
+	<script type="text/javascript" src="functions.js"></script>
+</head>
+<body>
+	<h1>Лабораторна робота №4</h1>
+	
+	<h2>Завдання 1</h2>
+	<p><img src="1.jpg"></p>
+	<a HREF="JavaScript:alert('Спосіб 1!!!'); lab4();"> url-посилання!!!</a>
+	<button onclick="lab4()">Спосіб 2</button>
+	<button id="b2">Спосіб 3</button>
+	<button id="b3">Спосіб 4</button>
+	<p id="res">
+		
+	</p>
+	<script type="text/javascript">
+		//************************************************
+		var A=[2,4,2,17,23,5,0,-1,90, 34];
+		var B=[11,4,-3,19,23,57,20,0,81,34];
+
+		var C=[];
+
+		b2.onclick=function(){
+			lab4();
+		}
+		
+		//const b3 = document.querySelector('button');
+		b3.addEventListener('click', event => {lab4();});
+	</script>
+	
+	<h2>Завдання 1 - Редактор тексту:</h2>
+	<BR>напишіть тут який-небудь текст
+	<BR>виділіть текст мишкою й натисніть відповідну кнопку
+	<div style="padding-top:5px; padding-bottom:10px;">
+		<button onclick="change_text('<b>', '</b>');ViewText();">
+			<b>B</b>
+		</button>
+		
+		<button onclick="change_text('<i>', '</i>'); ViewText();">
+			<i>i</i>
+		</button>
+		
+		<button onclick="change_text('<u>', '</u>'); ViewText();">
+			<u>u</u>
+		</button>
+		
+		<input type="color" onchange="change_text('<font color=' + this.value + '>', '</font>'); ViewText();">
+	</div>
+	
+	<textarea id="editableTextarea" style="height:200px; width:600px; border:1px solid gray;" onkeyup='ViewText();'>
+	</textarea>
+
+	<div style="padding-top:10px;">
+		<font>Текст для проглядання:</font>
+	</div>
+
+	<div id="DivView" style="height:200px; width:600px; border:1px solid gray; background-color:#E0E0E0; display:none;">
+	</div>
+	<script language="JavaScript">
+		 function ViewText()
+		 {
+			  document.getElementById("DivView").style.display = "";
+			  document.getElementById("DivView").innerHTML = document.getElementById("editableTextarea").value;
+
+			  // заменяем "\n" на "<BR>" во всем тексте
+			  var text = document.getElementById("DivView").innerHTML;
+			  text = text.replace(new RegExp("\n","g"), "<BR>");
+			  document.getElementById("DivView").innerHTML = text;
+		 }
+
+		 function change_text(tag1, tag2)
+		 {
+			  if (tag1=="" || tag2=="")
+				   return;
+
+			  var elemText = document.getElementById("editableTextarea");
+			  if (elemText==null)
+				   return;
+
+			  // get text
+			  var text = elemText.value;
+
+			  // get position
+			  var posSelection1 = elemText.selectionStart;
+			  var posSelection2 = elemText.selectionEnd;
+
+			  // get 2 text
+			  var str1 = text.substr(0, posSelection1);
+			  var strMiddle = text.substr(posSelection1, posSelection2-posSelection1);
+			  var str2 = text.substr(posSelection2);
+
+			  // set text
+			  elemText.value = str1 + tag1 + strMiddle + tag2 + str2;
+			  elemText.selectionStart = str1.length + tag1.length;
+			  elemText.selectionEnd = elemText.selectionStart+strMiddle.length;
+			  elemText.focus();
+		 }
+
+		 ViewText();
+	</script>
+
+</body>
+</html>
+
